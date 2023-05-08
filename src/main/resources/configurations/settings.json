@@ -1,0 +1,9 @@
+{
+  "mysql": {
+    "driverClass": "org.h2.Driver",
+    "platform": "org.hibernate.dialect.H2Dialect",
+    "url": "jdbc:h2:file:./data.db",
+    "username": "discord",
+    "password": ""
+  }
+}

@@ -16,6 +16,7 @@
 
 package de.nicklasmatzulla.csdiscordbot;
 
+import de.nicklasmatzulla.csdiscordbot.config.SettingsConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -23,7 +24,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CSDiscordBotApplication {
 
     public static void main(String[] args) {
+        final SettingsConfiguration settingsConfiguration = new SettingsConfiguration();
         final SpringApplication application = new SpringApplication(CSDiscordBotApplication.class);
+        application.setDefaultProperties(settingsConfiguration.getSpringProperties());
         application.run(args);
     }
 
