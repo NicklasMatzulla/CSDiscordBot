@@ -5,5 +5,9 @@
     "url": "jdbc:h2:file:./data.db",
     "username": "discord",
     "password": ""
+  },
+  "discord": {
+    "botToken": "",
+    "activity": "auf CyberSucht.net"
   }
 }

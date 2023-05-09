@@ -54,6 +54,12 @@ public class SettingsConfiguration extends JsonConfiguration {
 
     private Properties springProperties;
 
+    @ConfigurationValue(key = "discord.botToken")
+    private String discordBotToken;
+
+    @ConfigurationValue(key = "discord.activity")
+    private String discordActivity;
+
     public SettingsConfiguration() {
         SettingsConfiguration.instance = this;
         initializeSpringProperties();
