@@ -17,8 +17,14 @@
 package de.nicklasmatzulla.csdiscordbot.jda;
 
 import de.nicklasmatzulla.csdiscordbot.config.SettingsConfiguration;
+import de.nicklasmatzulla.csdiscordbot.jda.command.EmbedCommand;
 import lombok.Getter;
+import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.events.session.ReadyEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions;
+import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
@@ -30,7 +36,7 @@ import java.util.List;
 
 @Getter
 @Service
-public class DiscordBot {
+public class DiscordBot extends ListenerAdapter {
 
     @Getter
     private static DiscordBot instance;
@@ -50,7 +56,23 @@ public class DiscordBot {
                 .setAutoReconnect(true)
                 .setIdle(true)
                 .setActivity(Activity.playing(settingsConfiguration.getDiscordActivity()))
+                .addEventListeners(
+                        this,
+                        new EmbedCommand())
                 .build();
+    }
+
+    @Override
+    public void onReady(ReadyEvent event) {
+        final JDA jda = event.getJDA();
+        registerCommands(jda);
+    }
+
+    private void registerCommands(final JDA jda) {
+        jda.upsertCommand(Commands.slash("embed", "Create an embed message")
+                        .setGuildOnly(true)
+                        .setDefaultPermissions(DefaultMemberPermissions.DISABLED))
+                .queue();
     }
 
 }

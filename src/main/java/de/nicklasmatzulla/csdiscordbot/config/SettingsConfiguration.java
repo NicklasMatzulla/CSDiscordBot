@@ -60,6 +60,9 @@ public class SettingsConfiguration extends JsonConfiguration {
     @ConfigurationValue(key = "discord.activity")
     private String discordActivity;
 
+    @ConfigurationValue(key = "discord.modal.createEmbed.title")
+    private String discordModalCreateEmbedTitle;
+
     public SettingsConfiguration() {
         SettingsConfiguration.instance = this;
         initializeSpringProperties();
