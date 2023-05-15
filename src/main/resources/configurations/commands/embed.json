@@ -1,0 +1,99 @@
+{
+  "embed": {
+    "embedBuilder": {
+      "selectionMenu": {
+        "placeholder": "Wähle das zu bearbeitende Element aus",
+        "entry": {
+          "authorIconUrl": "Author Icon URL",
+          "authorTextAndUrl": "Author Text/URL",
+          "bodyThumbnailUrl": "Body Thumbnail URL",
+          "bodyTitleAndUrl": "Body Title Text/URL",
+          "bodyDescription": "Body Description",
+          "bodyImageUrl": "Body Image URL",
+          "footerIconUrl": "Footer Icon URL",
+          "footerText": "Footer Text",
+          "footerTimestamp": "Footer Timestamp",
+          "hexColor": "Embed Color (Hexadecimal)"
+        }
+      },
+      "button": {
+        "fieldSelectorBack": "Zurück",
+        "fieldSelectorEdit": "Bearbeite Field <fieldId>",
+        "fieldSelectorNext": "Weiter",
+        "create": "Erstellen"
+      },
+      "modal": {
+        "authorIconUrl": {
+          "modalTitle": "Bearbeite Author Icon URL",
+          "field": {
+            "authorIconUrl": "Author Icon URL"
+          }
+        },
+        "authorTextAndUrl": {
+          "modalTitle": "Bearbeite Author Text/URL",
+          "field": {
+            "authorText": "Author Text",
+            "authorUrl": "Author URL"
+          }
+        },
+        "bodyThumbnailUrl": {
+          "modalTitle": "Bearbeite Body Thumbnail URL",
+          "field": {
+            "bodyThumbnailUrl": "Body Thumbnail URL"
+          }
+        },
+        "bodyTitleAndUrl": {
+          "modalTitle": "Bearbeite Body Title Text/URL",
+          "field": {
+            "bodyTitle": "Body Title",
+            "bodyUrl": "Body URL"
+          }
+        },
+        "bodyDescription": {
+          "modalTitle": "Bearbeite Body Description",
+          "field": {
+            "bodyDescription": "Body Description"
+          }
+        },
+        "bodyImageUrl": {
+          "modalTitle": "Bearbeite Body Image URL",
+          "field": {
+            "bodyImageUrl": "Body Image URL"
+          }
+        },
+        "footerIconUrl": {
+          "modalTitle": "Bearbeite Footer Icon URL",
+          "field": {
+            "footerIconUrl": "Footer Icon URL"
+          }
+        },
+        "footerText": {
+          "modalTitle": "Bearbeite Footer Text",
+          "field": {
+            "footerText": "Footer Text"
+          }
+        },
+        "footerTimestamp": {
+          "modalTitle": "Bearbeite Footer Timestamp",
+          "field": {
+            "footerTimestamp": "Footer Timestamp"
+          }
+        },
+        "hexColor": {
+          "modalTitle": "Bearbeite Embed Color",
+          "field": {
+            "hexColor": "Embed Color (Hexadecimal)"
+          }
+        },
+        "editField": {
+          "modalTitle": "Bearbeite Body Field <fieldId>",
+          "field": {
+            "fieldName": "Field Title",
+            "fieldValue": "Field Value",
+            "fieldInline": "Field Inline"
+          }
+        }
+      }
+    }
+  }
+}
